@@ -53,8 +53,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">iHERO: Interactive Human-oriented Exploration
-              and Supervision Under Scarce Communication</h1>
+            <h1 class="title is-1 publication-title">MoRoCo: Multi-operator-robot Coordination, Interaction and Exploration under Scarce Communicationn</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -69,7 +68,7 @@
                     </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">College of Engineering, Peking University<br>Robotics: Science and Systems (RSS) 2024</span>
+                    <span class="author-block">College of Engineering, Peking University<br>2025</span>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
@@ -135,16 +134,16 @@
         <!-- Your video here -->
         <!-- <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video> -->
-      <img src="static/images/first_fig_large.png" alt="MY ALT TEXT"/>
+      <img src="static/images/illustration.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Illustration of the considered scenario. Top-left: 4
-        UGVs switch among exploration, intermittent communication
-        and return to the operator; Top-right: Different local maps at
-        each robot, which are updated via pairwise communication;
-        Bottom: three types of <b>human requests</b>: (i) <b>Prioritized regions</b>
-        (in blue) to explore (Left); (ii) <b>Status update</b> with bounded
-        latency via return events (Middle); (iii) <b>Dynamic movement</b>
-        of the operator within the allowed region (in red) (Right).
+        Illustration of the considered scenario, where multiple operators and robots are deployed in an unknown and
+ communication-scarce environment for exploration and task execution. (A): Within one team (one operator, one UGV and one
+ mobile manipulator), the robots coordinate via intra-team intermittent communication to actively explore the environment, while
+ ensuring a timely feedback to the operator with a maximum latency, in the proposed “spread mode”; (B): The operator can move in
+ the environment without losing connection with the team via the proposed interaction protocol, or as a team via the proposed
+ “migrate mode”; (C): For remote requests that require high-bandwidth (such as inspection and remote control), the robots form a
+ communication chain to stream real-time video to the operator via the proposed “chain mode”; (D): Robots from different teams act
+ as temporary messengers for inter-team data exchange under a latency bound, to achieve efficient coordination.
       </h2>
     </div>
   </div>
@@ -160,31 +159,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Exploration of unknown scenes before human entry
-            is essential for safety and efficiency in numerous scenarios,
-            e.g., subterranean exploration, reconnaissance, search and rescue
-            missions. Fleets of autonomous robots are particularly suitable
-            for this task, via concurrent exploration, multi-sensory perception 
-            and autonomous navigation. Communication however
-            among the robots can be severely restricted to only close-range 
-            exchange via ad-hoc networks. Although some recent
-            works have addressed the problem of collaborative exploration
-            under restricted communication, the crucial role of the human
-            operator has been mostly neglected. Indeed, the operator may:
-            (i) require timely update regarding the exploration progress and
-            fleet status; (ii) prioritize certain regions; and (iii) dynamically
-            move within the explored area; To facilitate these requests, this
-            work proposes an interactive human-oriented online coordination
-            framework for collaborative exploration and supervision under
-            scarce communication (iHERO). The robots switch smoothly and
-            optimally among fast exploration, intermittent exchange of map
-            and sensory data, and return to the operator for status update.
-            It is ensured that these requests are fulfilled online interactively
-            with a pre-specified latency. Extensive large-scale human-in-the-loop 
-            simulations and hardware experiments are performed
-            over numerous challenging scenes, which signify its performance
-            such as explored area and efficiency, and validate its potential
-            applicability to real-world scenarios.
+             Fleets of autonomous robots are often deployed along with several human operators to explore unknown scenes,
+ identify potential features and take actions in various scenarios, e.g., subterranean exploration, reconnaissance, search
+ and rescue missions. In such scenarios, communication among the robots and operators can be severely restricted to
+ only close-range exchange via ad-hoc networks. Some recent works consider collaborative exploration under limited
+ communication, which however mostly neglect the crucial rule of human operators, and the online interactions between
+ the operators and the robotic fleets. Particularly, the operators may: (I) require timely feedback regarding the exploration
+ progress and fleet status (II) prioritize or cancel certain regions or move dynamically; and (III) request real-time access
+ to the video streams or control commands of certain robots. On the other hand, the robots may: (I) request human
+ confirmation of unusual events or certain actions; and (II) ask for assistance to recover from planning or motion failures.
+ To facilitate these interactions under scarce communication, a complete framework called MoRoCo is proposed in
+ this work for the online coordination, interaction and exploration of multi-operator multi-robot systems. Depending on
+ the type of requests, the robotic teams and operators switch smoothly and optimally between the “spread mode” for
+ simultaneous fast exploration and intermittent exchange of sensory data and coordination messages; the “migrate
+ mode” for swift migration to a different region as a team; and the “chain mode” to form multi-hop networks for a
+ reliable high-bandwidth transfer while maintaining connectivity in motion. It is ensured that these bilateral and multi
+modal requests can be fulfilled online via only local communications and distributed coordination. Extensive large
+scale human-in-the-loop simulations and hardware experiments are performed over numerous challenging scenes and
+ diverse online interactions, which validates not only the necessity of human-fleet interaction but also the efficiency of
+ the proposed framework under scarce communication.
           </p>
         </div>
       </div>
@@ -200,13 +193,16 @@
     <div class="hero-body">
       <div class="columns is-centered has-text-centered"></div>
         <h2 style="text-align: center" class="title is-3">Overall Framework</h2>
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
+<!--         <video poster="" id="tree" autoplay controls muted loop height="100%">
           <!-- Your video here -->
           <source src="static/videos/Framework.mp4" type="video/mp4">
-        </video>
+        </video> -->
+       <img src="static/images/framework.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Illustration of the proposed framework (iHERO), which consists of the inter-robot and robot-operator communication
-          protocol, the collaborative exploration strategy, and more importantly, the online adaptation module to operator requests.
+          Illustration of the proposed framework MoRoCo, for the coordination, supervision and interaction of multi-operator
+ multi-robot systems that operate in unknown environments under scarce communication. Bilateral and multi-modal interactions
+ during exploration are explicitly modeled including 7 types of operator-robot and operator-operator requests. Three operation modes
+ as “spread, migrate and chain” modes are designed to facilitate the distributed communication and the fulfillment of these requests.
         </h2>
       </div>
     </div>
