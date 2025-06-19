@@ -158,25 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-             Fleets of autonomous robots are often deployed along with several human operators to explore unknown scenes,
- identify potential features and take actions in various scenarios, e.g., subterranean exploration, reconnaissance, search
- and rescue missions. In such scenarios, communication among the robots and operators can be severely restricted to
- only close-range exchange via ad-hoc networks. Some recent works consider collaborative exploration under limited
- communication, which however mostly neglect the crucial rule of human operators, and the online interactions between
- the operators and the robotic fleets. Particularly, the operators may: (I) require timely feedback regarding the exploration
- progress and fleet status (II) prioritize or cancel certain regions or move dynamically; and (III) request real-time access
- to the video streams or control commands of certain robots. On the other hand, the robots may: (I) request human
- confirmation of unusual events or certain actions; and (II) ask for assistance to recover from planning or motion failures.
- To facilitate these interactions under scarce communication, a complete framework called MoRoCo is proposed in
- this work for the online coordination, interaction and exploration of multi-operator multi-robot systems. Depending on
- the type of requests, the robotic teams and operators switch smoothly and optimally between the “spread mode” for
- simultaneous fast exploration and intermittent exchange of sensory data and coordination messages; the “migrate
- mode” for swift migration to a different region as a team; and the “chain mode” to form multi-hop networks for a
- reliable high-bandwidth transfer while maintaining connectivity in motion. It is ensured that these bilateral and multi
-modal requests can be fulfilled online via only local communications and distributed coordination. Extensive large
-scale human-in-the-loop simulations and hardware experiments are performed over numerous challenging scenes and
- diverse online interactions, which validates not only the necessity of human-fleet interaction but also the efficiency of
- the proposed framework under scarce communication.
+             Fleets of autonomous robots are increasingly deployed alongside multiple human operators to explore unknown environments, identify salient features, and carry out complex tasks in scenarios such as subterranean exploration, reconnaissance, and search-and-rescue missions. In these contexts, communication is often severely limited to short-range exchanges via ad-hoc networks, posing challenges to coordination. While recent studies have addressed multi-robot exploration under communication constraints, they largely overlook the essential role of human operators and their real-time interaction with robotic teams. Operators may demand timely updates on exploration progress and robot status, reprioritize or cancel tasks dynamically, or request live video feeds and control access. Conversely, robots may seek human confirmation for anomalous events or require help recovering from motion or planning failures. To enable such two-way, context-aware interactions under restricted communication, we propose MoRoCo, a unified framework for online coordination and exploration in multi-operator, multi-robot systems. MoRoCo enables the team to adaptively switch among three coordination modes: spread mode for parallelized exploration with intermittent data sharing, migrate mode for coordinated relocation, and chain mode for maintaining high-bandwidth connectivity through multi-hop links. These transitions are managed through fully distributed algorithms using only local communication. Extensive large-scale human-in-the-loop simulations and real-world hardware experiments validate the necessity of incorporating human-robot interaction and demonstrate that MoRoCo enables efficient, reliable coordination under communication-limited conditions, marking a significant step toward robust human-in-the-loop autonomy in challenging environments.
           </p>
         </div>
       </div>
