@@ -52,15 +52,15 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MoRoCo: Multi-operator-robot Coordination, Interaction and Exploration under Scarce Communicationn</h1>
+            <h1 class="title is-1 publication-title">MoRoCo: An Online Topology-Adaptive Framework for Multi-Operator Multi-Robot Coordination under Restricted Communication</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhuoli Tian</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yuyang Zhang</a>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yanze Bao</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jinsheng Wei</a>,</span>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yuyang Zhang</a>,</span>
                     <span class="author-block">
                       <a href="https://mengguo.github.io/personal_site/" target="_blank">Meng Guo</a>
                     </span>
@@ -158,7 +158,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-             Fleets of autonomous robots are increasingly deployed alongside multiple human operators to explore unknown environments, identify salient features, and carry out complex tasks in scenarios such as subterranean exploration, reconnaissance, and search-and-rescue missions. In these contexts, communication is often severely limited to short-range exchanges via ad-hoc networks, posing challenges to coordination. While recent studies have addressed multi-robot exploration under communication constraints, they largely overlook the essential role of human operators and their real-time interaction with robotic teams. Operators may demand timely updates on exploration progress and robot status, reprioritize or cancel tasks dynamically, or request live video feeds and control access. Conversely, robots may seek human confirmation for anomalous events or require help recovering from motion or planning failures. To enable such two-way, context-aware interactions under restricted communication, we propose MoRoCo, a unified framework for online coordination and exploration in multi-operator, multi-robot systems. MoRoCo enables the team to adaptively switch among three coordination modes: spread mode for parallelized exploration with intermittent data sharing, migrate mode for coordinated relocation, and chain mode for maintaining high-bandwidth connectivity through multi-hop links. These transitions are managed through fully distributed algorithms using only local communication. Extensive large-scale human-in-the-loop simulations and real-world hardware experiments validate the necessity of incorporating human-robot interaction and demonstrate that MoRoCo enables efficient, reliable coordination under communication-limited conditions, marking a significant step toward robust human-in-the-loop autonomy in challenging environments.
+          Fleets of autonomous robots are increasingly deployed with multiple human operators in communication-restricted environments for exploration and intervention tasks such as subterranean inspection, reconnaissance, and search-and-rescue.
+  In these settings, communication is often limited to short-range ad-hoc links, making it difficult to coordinate exploration while supporting online human-fleet interactions.
+  Existing work on multi-robot exploration largely focuses on information gathering itself, but pays limited attention to the fact that operators and robots issue time-critical requests during execution.
+  These requests may require different communication structures, ranging from intermittent status delivery to sustained video streaming and teleoperation.
+  To address this challenge, this paper presents MoRoCo, an online topology-adaptive framework for multi-operator multi-robot coordination under restricted communication.
+  MoRoCo is built on a latency-bounded intermittent communication backbone that guarantees a prescribed delay for information collected by any robot to reach an operator, together with a detach-and-rejoin mechanism that enables online team resizing and topology reconfiguration.
+  On top of this backbone, the framework instantiates request-consistent communication subgraphs to realize different modes of operator-robot interaction by jointly assigning robot roles, positions, and communication topology.
+  It further supports the online decomposition and composition of these subgraphs using only local communication,
+  allowing multiple requests to be serviced during exploration. The framework extends to heterogeneous fleets, multiple teams, and robot failures.
+  Extensive human-in-the-loop simulations and hardware experiments demonstrate effective and reliable coordination under restricted communication. 
           </p>
         </div>
       </div>
