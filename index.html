@@ -185,10 +185,11 @@
         <h2 style="text-align: center" class="title is-3">Overall Framework</h2>
        <img src="static/images/framework.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Illustration of the proposed framework MoRoCo, for the coordination, supervision and interaction of multi-operator
- multi-robot systems that operate in unknown environments under scarce communication. Bilateral and multi-modal interactions
- during exploration are explicitly modeled including 7 types of operator-robot and operator-operator requests. Three operation modes
- as “spread, migrate and chain” modes are designed to facilitate the distributed communication and the fulfillment of these requests.
+          Overall framework of MoRoCo for multi-operator multi-robot coordination under restricted communication. Built on a latency-bounded intermittent
+communication backbone, MoRoCo supports collaborative exploration and online request delivery via only local communication (Left). Given the current
+embedded graph and active requests, the framework performs online embedded graph matching to instantiate request-consistent target graphs (Middle). These
+graph transformations are then realized through the detach-and-rejoin mechanism (Right), allowing the fleet to split into request-serving subgraphs and later
+rejoin the exploration backbone. It is worth noting that both intra-team and inter-team information exchange are latency-bounded.
         </h2>
       </div>
     </div>
@@ -346,8 +347,8 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@misc{tian2025morocomultioperatorrobotcoordinationinteraction,
-      title={MoRoCo: Multi-operator-robot Coordination, Interaction and Exploration under Restricted Communication}, 
-      author={Zhuoli Tian and Yuyang Zhang and Jinsheng Wei and Meng Guo},
+      title={MoRoCo: An Online Topology-Adaptive Framework for Multi-Operator Multi-Robot Coordination under Restricted Communication}, 
+      author={Zhuoli Tian and Yanze Bao and Yuyang Zhang and Meng Guo},
       year={2025},
       eprint={2508.07657},
       archivePrefix={arXiv},
